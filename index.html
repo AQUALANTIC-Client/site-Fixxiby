@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixxiby - Advanced MCP Client</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="lang-en">
+
+    <header>
+        <div class="container" style="display: inherit; justify-content: inherit; width: 100%;">
+            <a href="#" class="logo">Fixxiby</a>
+            <div class="header-controls">
+                <a href="https://aqualantic.com" class="btn btn-secondary"
+                    style="height: 36px; padding: 0 16px; font-size: 0.9rem; margin-right: 12px; border: 1px solid var(--border); color: var(--text-main); gap: 4px;">
+                    <svg viewBox="0 0 24 24"
+                        style="width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to AQUALANTIC
+                </a>
+
+                <select class="lang-select" id="langSwitcher">
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                </select>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                    <!-- ... icons ... -->
+                    <svg class="icon-sun" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+
+                <a href="https://github.com/AQUALANTIC-Client/FixxibyMCP" target="_blank" class="btn btn-secondary"
+                    style="height: 36px; padding: 0 16px; font-size: 0.9rem;">
+                    <!-- GitHub Icon Mini -->
+                    <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; margin-right: 8px;">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" style="border-top: none;">
+            <div class="container">
+                <div class="hero-split">
+                    <div class="hero-text">
+                        <h1>Fixxiby</h1>
+                        <p data-lang="en">The next generation MCP client for Minecraft.<br>Built for performance,
+                            customized by you.</p>
+                        <p data-lang="ja">Minecraftのための次世代MCPクライアント。<br>パフォーマンスを追求し、あなただけのカスタマイズを。</p>
+
+                        <div class="cta-group">
+                            <div class="btn-tooltip-wrapper">
+                                <button class="btn btn-primary disabled" disabled>
+                                    <!-- Download Icon -->
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                                    </svg>
+                                    <span data-lang="en">Download <span class="badge-beta">Beta</span></span>
+                                    <span data-lang="ja">ダウンロード <span class="badge-beta">Beta</span></span>
+                                </button>
+                                <div class="tooltip">Soon!</div>
+                            </div>
+                            <a href="https://github.com/AQUALANTIC-Client/FixxibyMCP" target="_blank"
+                                class="btn btn-secondary">
+                                <!-- GitHub Icon -->
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="minecraft window.png" alt="Fixxiby Client Screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">
+                    <span data-lang="en">Core Features</span>
+                    <span data-lang="ja">主な機能</span>
+                </h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="feature-title" data-lang="en">Lightning Fast</h3>
+                        <h3 class="feature-title" data-lang="ja">超高速動作</h3>
+                        <p class="feature-text" data-lang="en">Optimized for 1.8.9, delivering high FPS and low latency
+                            inputs for the competitive edge.</p>
+                        <p class="feature-text" data-lang="ja">1.8.9環境に最適化されており、高いFPSと低遅延入力で競技シーンでの優位性を提供します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧩</div>
+                        <h3 class="feature-title" data-lang="en">Plug System</h3>
+                        <h3 class="feature-title" data-lang="ja">Plugシステム</h3>
+                        <p class="feature-text" data-lang="en">Extend functionality with the robust 'Plug' scripting
+                            engine. Create your own modules in seconds.</p>
+                        <p class="feature-text" data-lang="ja">強力なスクリプトエンジン「Plug」で機能を拡張。独自のモジュールを数秒で作成できます。</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🔗</div>
+                        <h3 class="feature-title" data-lang="en">Node Variable Sharing</h3>
+                        <h3 class="feature-title" data-lang="ja">ノードによる変数共有</h3>
+                        <span class="badge-planned">Planned</span>
+                        <p class="feature-text" data-lang="en">Variables of the same type can be linked and shared via
+                            nodes without conversion.</p>
+                        <p class="feature-text" data-lang="ja">変換を通さない型が同じの変数はノードで結合して共有することができます。</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📦</div>
+                        <h3 class="feature-title" data-lang="en">External Java Libraries</h3>
+                        <h3 class="feature-title" data-lang="ja">Javaの外部ライブラリ</h3>
+                        <span class="badge-planned">Planned</span>
+                        <p class="feature-text" data-lang="en">Use the Module system to access network or OS functions
+                            in Plugs.<br><small>*Restart required to enable modules.</small></p>
+                        <p class="feature-text" data-lang="ja">
+                            Module管理システムを使用することで、plugにおいてネットワークやOS機能などの追加関数を使用することができます。<br><small>※各種Moduleを有効化した場合にはFixxibyの再起動が必要です。</small>
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📥</div>
+                        <h3 class="feature-title" data-lang="en">Package Manager "pnp"</h3>
+                        <h3 class="feature-title" data-lang="ja">パッケージマネージャの実装</h3>
+                        <span class="badge-planned">Planned</span>
+                        <p class="feature-text" data-lang="en">Manage Modules and download new Plugs directly within
+                            Fixxiby using the "pnp" manager.</p>
+                        <p class="feature-text" data-lang="ja">
+                            パッケージマネージャ"pnp"を使用することで各種Moduleの追加、plugの新規ダウンロードをFixxiby単体で扱うことができます。</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PLUG SYSTEM DETAIL -->
+        <section class="section-dark">
+            <div class="container">
+                <div class="split-layout">
+                    <div>
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">
+                            <span data-lang="en">Script Your Way</span>
+                            <span data-lang="ja">スクリプトで自由自在</span>
+                        </h2>
+                        <p class="feature-text" data-lang="en">
+                            Fixxiby's proprietary <strong>Plug Scripting Language</strong> allows interaction with game
+                            internals simply and safely.
+                            Define modules, handle events, and render GL graphics with ease.
+                        </p>
+                        <p class="feature-text" data-lang="ja">
+                            Fixxiby独自の<strong>Plugスクリプティング言語</strong>により、ゲーム内部との安全かつシンプルな連携が可能です。
+                            モジュールの定義、イベント処理、GLグラフィックスの描画が簡単に行えます。
+                        </p>
+                        <br>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <a href="https://github.com/AQUALANTIC-Client/FixxibyMCP/tree/main/docs" target="_blank"
+                                class="btn btn-secondary" data-lang="en">
+                                <span>Read Documentation →</span>
+                            </a>
+                            <a href="https://github.com/AQUALANTIC-Client/FixxibyMCP/blob/main/docs/ja/plug/01_overview.md"
+                                target="_blank" class="btn btn-secondary" data-lang="ja">
+                                <span>ドキュメントを読む →</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="code-preview">
+                        <pre><code><span class="comment">@name "AutoSprint"</span>
+<span class="comment">@category "Movement"</span>
+
+<span class="keyword">plug</span> <span class="method">AutoSprint</span> {
+    <span class="comment">// ClickGUI Toggle: Label, Variable, Default</span>
+    <span class="keyword">plug.clickgui.item</span> {
+        <span class="method">toggle</span>(<span class="string">"Enable Sprint"</span>, sprintActive, <span class="keyword">false</span>)
+    }
+
+    <span class="keyword">onTick</span> {
+        <span class="keyword">if</span> (sprintActive) {
+            mc.player.sprint(<span class="keyword">true</span>)
+        } <span class="keyword">else</span> {
+            mc.player.sprint(<span class="keyword">false</span>)
+        }
+    }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUESTIONS SECTION -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Questions</h2>
+                <div class="faq-container">
+                    <!-- Q1 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span data-lang="en">Why didn't you make it so Java code could be executed directly?</span>
+                            <span data-lang="ja">なぜJavaのコードをそのまま実行できるようにしなかったんですか？</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p data-lang="en">Because I strongly felt that "if we're doing this, I want to let people
+                                develop in a unique language."</p>
+                            <p data-lang="ja">「せっかくなら独自言語で開発させたい」という気持ちがあったからです。</p>
+
+                            <details class="faq-item faq-nested">
+                                <summary class="faq-question">
+                                    <span data-lang="en">Are you stupid??</span>
+                                    <span data-lang="ja">あなたアホなんですか？？</span>
+                                    <span class="faq-icon">+</span>
+                                </summary>
+                                <div class="faq-answer">
+                                    <p data-lang="en">I wouldn't be doing this if I wasn't stupid.</p>
+                                    <p data-lang="ja">アホじゃなかったらこんなことしてないよ</p>
+                                </div>
+                            </details>
+                        </div>
+                    </details>
+
+                    <!-- Q2 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span data-lang="en">Is it safe?</span>
+                            <span data-lang="ja">これって安全なんですか？</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p data-lang="en">It depends on the individual. If you consider it unsafe, we recommend
+                                downloading the source code, removing the unsafe parts, and building it yourself.</p>
+                            <p data-lang="ja">個人差によります。安全でないと考えられる場合はソースコードをダウンロードし安全でないコードを取り除いて自分でビルドすることをお勧めします。</p>
+                        </div>
+                    </details>
+
+                    <!-- Q3 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span data-lang="en">Is it free?</span>
+                            <span data-lang="ja">無料ですか？</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p data-lang="en">The client itself, including the module that loads plug files and the
+                                ClickGUI, is free. We cannot answer regarding the pricing of user-created plugs as it
+                                depends on the distributor.</p>
+                            <p data-lang="ja">
+                                plugファイルを読み込むモジュールやClickGUIのついたクライアント自体は無料です。ユーザーによって作成されたplugに関しての価格設定はplugの配布者によって異なるためお答えすることはできかねます。
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- Q4 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span data-lang="en">What versions are supported?</span>
+                            <span data-lang="ja">対応バージョンは？</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p data-lang="en">Currently only 1.8.9. If there is motivation, we might port it to higher
+                                versions.</p>
+                            <p data-lang="ja">現時点では1.8.9のみです。やる気があればそれよりも高いバージョンにポートするかもしれません。</p>
+                        </div>
+                    </details>
+
+                    <!-- Q5 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span data-lang="en">Is a license required?</span>
+                            <span data-lang="ja">ライセンスは必要ですか？</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p data-lang="en">It is definitely required when dealing with online mode servers. When
+                                dealing only with offline mode servers, please launch from a launcher that allows
+                                changing the username in offline mode. Some forks require a license, but we recommend
+                                MultiMC or its forks.</p>
+                            <p data-lang="ja">
+                                オンラインモードのサーバーを扱う場合においては確実に必要です。オフラインモードのサーバーのみを扱う際はオフラインモードにおいてユーザー名の変更を可能とするランチャーから起動してください。フォークによってはライセンスを必要としますが、MultiMCまたはそれらのフォークをお勧めします。
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- Q6 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span data-lang="en">Was this code written by hand by the repository contributors?</span>
+                            <span data-lang="ja">これはレポジトリの貢献者が手で書いたコードですか？</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p data-lang="en">No. We used Gemini 3 Pro / Claude Opus 4.5 in Google Antigravity for
+                                almost all Java code.</p>
+                            <p data-lang="ja">いいえ。Google AntigravityにおけるGemini 3 Pro / Claude Opus
+                                4.5をほぼすべてのJavaコードにおいて使用しました。</p>
+
+                            <details class="faq-item faq-nested">
+                                <summary class="faq-question">
+                                    <span data-lang="en">So the creator can't write code using their brain??</span>
+                                    <span data-lang="ja">つまりこれ作った人は頭で考えてコードが書けない方ですか？？</span>
+                                    <span class="faq-icon">+</span>
+                                </summary>
+                                <div class="faq-answer">
+                                    <p data-lang="en">At least one person can use their brain to read documentation and
+                                        write code only in non-object-oriented languages.</p>
+                                    <p data-lang="ja">少なくとも一人だけはオブジェクト指向以外の言語でのみ頭を使いドキュメントを読みコードが書けます。</p>
+                                </div>
+                            </details>
+                        </div>
+                    </details>
+
+                    <!-- Q7 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span data-lang="en">How do I build it?</span>
+                            <span data-lang="ja">ビルド方法は？</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p data-lang="en">Please see README.md on GitHub.</p>
+                            <p data-lang="ja">GitHubのREADME.mdをご覧ください。</p>
+                        </div>
+                    </details>
+
+                    <!-- Q8 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span data-lang="en">The plug isn't working! Help!</span>
+                            <span data-lang="ja">plugが動かない！助けろ</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p data-lang="en">First, please refer to the logs generated at runtime. If you see an error
+                                code like PLXXXX, refer to the documentation to verify the cause of the error. Those
+                                logs should state which file and line caused the error. If you provided an invalid value
+                                in ClickGUI, please reset that plug's config. Otherwise, consider how to fix it based on
+                                the error and edit the plug file. If no logs appear, please add debug printouts within
+                                the plug file using <code>@debug.mc.print(string)</code>. After adding it, enable debug
+                                with <code>.p dbg enable &lt;plug name&gt;</code> and then enable the plug; debug output
+                                should appear. Please fix it through trial and error from there.</p>
+                            <p data-lang="ja">
+                                まず実行時に出たログを参照してください。PLXXXXのようなエラーコードが見える場合は、ドキュメントを参照してどのようなことが原因でエラーが起きているのかを確かめてください。それらログにはどのファイルのどの行でエラーがあったのかが書いてあるはずです。ClickGUIで不正な値を与えてしまった場合はそのplugのコンフィグをリセットしてください。そうでない場合、そのエラーにそってどのように修正すべきかを考え、plugファイルを編集してください。もしログなどが出ていない場合はplugファイル内でデバッグ用のプリントアウトを追加してください。<code>@debug.mc.print(string)</code>のような方式です。追加し終えたら<code>.p dbg enable &lt;plug name&gt;</code>でデバッグを有効化したのちplugを有効化するとデバッグ用のcoutが出るはずです。そこから試行錯誤をしながら直してください。
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- Q9 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span data-lang="en">Why is this page hosted on the AQUALANTIC domain?</span>
+                            <span data-lang="ja">AQUALANTICのドメインにこのページがホストされている理由は？</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p data-lang="en">Because buying a domain was a hassle.</p>
+                            <p data-lang="ja">ドメイン購入がめんどくさかったからです。</p>
+
+                            <details class="faq-item faq-nested">
+                                <summary class="faq-question">
+                                    <span data-lang="en">Is there a possibility of being integrated into
+                                        AQUALANTIC/AQUAVANISH?</span>
+                                    <span data-lang="ja">AQUALANTIC/AQUAVANISHに統合される可能性はありますか？</span>
+                                    <span class="faq-icon">+</span>
+                                </summary>
+                                <div class="faq-answer">
+                                    <p data-lang="en">No, because the fundamental concepts are different.</p>
+                                    <p data-lang="ja">そもそものコンセプトが違うのでないです。</p>
+                                </div>
+                            </details>
+
+                            <details class="faq-item faq-nested">
+                                <summary class="faq-question">
+                                    <span data-lang="en">Will the plug language be implemented as a script in
+                                        AQUALANTIC/AQUAVANISH?</span>
+                                    <span data-lang="ja">AQUALANTIC/AQUAVANISHにplug言語がスクリプトとして実装されることはありますか？</span>
+                                    <span class="faq-icon">+</span>
+                                </summary>
+                                <div class="faq-answer">
+                                    <p data-lang="en">I am not a developer of AQUALANTIC Client, so I cannot answer
+                                        regarding AQUALANTIC's implementation, but strictly speaking for AQUAVANISH, I
+                                        don't think it will be implemented.</p>
+                                    <p data-lang="ja">AQUALANTIC
+                                        Clientの開発者ではありませんからAQUALANTIC側の実装はお答えできかねますが、少なくともAQUAVANISHに関しては実装はされないと思います。
+                                    </p>
+                                </div>
+                            </details>
+                        </div>
+                    </details>
+
+                    <!-- Q10 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span data-lang="en">Do you plan to create a Forge/LegacyFabric version as a Mod?</span>
+                            <span data-lang="ja">ModとしてForge/LegacyFabric版を作成する予定はありますか？</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p data-lang="en">I'm unsure how much I can hook with Forge, and it seems heavy, so I chose
+                                MCP to maintain stability. There are no plans for a Forge port at this time.</p>
+                            <p data-lang="ja">
+                                ForgeはどこまでHookできるかがわからないのと、重たそうなので安定性を保つためにMCPにしています。現時点でのForgeポートの予定はありません。</p>
+                        </div>
+                    </details>
+
+                    <!-- Q11 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span data-lang="en">Is there a plan to port to MCPE/Bedrock Edition?</span>
+                            <span data-lang="ja">MCPE/統合版にポートされる予定はありますか？</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p data-lang="en">There are absolutely no plans to port to those versions.</p>
+                            <p data-lang="ja">それらのバージョンにポートされる予定は確実にありません。</p>
+
+                            <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-muted);">
+                                <li style="margin-bottom: 8px;">
+                                    <span data-lang="en">I lack the confidence to update immediately like Toolbox when
+                                        new versions are released. That's exactly as I said. Even if I could, I couldn't
+                                        handle the bugs. It might be possible if a maintainer is provided.</span>
+                                    <span
+                                        data-lang="ja">Toolboxのように最新版が出てもすぐにアップデートして対応できる自信がない。そのままです。仮にできたとしても不具合の対応がしきれないので無理です。メンテナーを用意してくれればこの点はいけます。</span>
+                                </li>
+                                <li style="margin-bottom: 8px;">
+                                    <span data-lang="en">Documentation is scarce. Even if decompilation is possible, the
+                                        lack of documentation makes it hard to imagine how to implement the plug
+                                        language.</span>
+                                    <span
+                                        data-lang="ja">Documentationが少ない。デコンパイレーションが可能であるバージョンであればいけるかもしれませんが、それにしてもドキュメントが少ないのでどのようにplug言語などを実装すべきかの想像がつきません。</span>
+                                </li>
+                                <li style="margin-bottom: 8px;">
+                                    <span data-lang="en">The official versions themselves are not stable at the moment.
+                                        As seen with the disaster of 1.21.120.</span>
+                                    <span
+                                        data-lang="ja">そもそもそれらの公式バージョンが現時点において安定していない。1.21.120の惨状を見てもらえればわかる通りです。</span>
+                                </li>
+                                <li>
+                                    <span data-lang="en">The community for those versions largely consists of mobile and
+                                        console users. This is the main reason. Explanation omitted.</span>
+                                    <span
+                                        data-lang="ja">それらバージョンのコミュニティがそもそもモバイル版やCS版を利用している方が多いため。一番の理由です。説明は省きます。</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- Q12 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span data-lang="en">Will I get banned on servers?</span>
+                            <span data-lang="ja">サーバーで扱ってもBANとかされませんか？</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p data-lang="en">Depends on the plug. Cheat-related plugs may be detected by anti-cheat
+                                systems, resulting in a ban. Use at your own risk.</p>
+                            <p data-lang="ja">
+                                plugの種類によりますが、チート関連のplugを扱う場合はアンチチートに検出されてそのままサーバーから禁止される可能性があります。自己責任でご使用ください。
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <div class="footer-links">
+                    <a href="https://github.com/AQUALANTIC-Client/FixxibyMCP" class="footer-link">GitHub</a>
+                    <a href="https://github.com/AQUALANTIC-Client/FixxibyMCP/issues" class="footer-link">Issues</a>
+                    <a href="https://github.com/AQUALANTIC-Client/FixxibyMCP/tree/main/docs"
+                        class="footer-link">Docs</a>
+                    <a href="#" class="footer-link">Discord</a>
+                </div>
+                <p>&copy; 2026 FixxibyMCP Project</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="assets/main.js"></script>
+</body>
+
+</html>
